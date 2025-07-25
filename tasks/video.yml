@@ -1,0 +1,6 @@
+---
+
+- name: install video utilities
+  ansible.builtin.package:
+    name: "{{ media_encoder_video_packages }}"
+    state: present

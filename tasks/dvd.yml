@@ -1,0 +1,8 @@
+---
+
+- name: install dvd utilities
+  ansible.builtin.package:
+    name: "{{ media_encoder_dvd_packages }}"
+    state: present
+
+- include_tasks: "dvd_css_{{ ansible_distribution }}.yml"

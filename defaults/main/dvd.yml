@@ -1,0 +1,13 @@
+---
+
+media_encoder_dvd_packages:
+  - dvdbackup
+
+
+######################################### Ubuntu
+media_encoder_dvd_css_Ubuntu:
+  - libdvdcss-dev
+  - libdvdcss2
+  - libdvd-pkg
+
+media_encoder_dvd_css_lib_Ubuntu: /usr/lib/x86_64-linux-gnu/libdvdcss.so.2

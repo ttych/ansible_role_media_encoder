@@ -1,0 +1,4 @@
+---
+
+media_encoder_audio_packages:
+  - ffmpeg

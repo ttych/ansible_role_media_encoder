@@ -1,0 +1,15 @@
+---
+
+- block:
+
+    - include_tasks: dvd.yml
+
+    - include_tasks: audio.yml
+
+    - include_tasks: video.yml
+
+  when: want_media_encoder
+
+- name: set has_media_encoder
+  set_fact:
+    has_media_encoder: "{{ want_media_encoder }}"

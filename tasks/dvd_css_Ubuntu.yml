@@ -1,0 +1,24 @@
+---
+
+- block:
+
+    - name: install libdvd-pkg
+      apt:
+        name: "{{ media_encoder_dvd_css_Ubuntu }}"
+        state: present
+        update_cache: yes
+
+    - name: verify libdvdcss installation
+      stat:
+        path: "{{ media_encoder_dvd_css_lib_Ubuntu }}"
+      register: t_media_encoder_dvd_css_lib
+
+    # - block:
+    - name: Reconfigure libdvd-pkg to build libdvdcss
+      command: dpkg-reconfigure libdvd-pkg --frontend=noninteractive
+      args:
+        creates: "{{ media_encoder_dvd_css_lib_Ubuntu }}"
+
+    #   when: not t_media_encoder_dvd_css_lib.stat.exists
+
+  when: ansible_distribution == "Ubuntu"
