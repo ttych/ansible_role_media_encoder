@@ -21,4 +21,4 @@
 
     #   when: not t_media_encoder_dvd_css_lib.stat.exists
 
-  when: ansible_distribution == "Ubuntu"
+  when: ansible_facts.distribution == "Ubuntu"

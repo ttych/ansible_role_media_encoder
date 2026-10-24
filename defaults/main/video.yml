@@ -4,3 +4,4 @@ media_encoder_video_packages:
   - ffmpeg
   - handbrake
   - handbrake-cli
+  - mkvtoolnix
